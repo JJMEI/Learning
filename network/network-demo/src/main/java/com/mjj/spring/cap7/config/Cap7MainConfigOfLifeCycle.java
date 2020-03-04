@@ -25,7 +25,7 @@ public class Cap7MainConfigOfLifeCycle {
      *
      * @return
      */
-//    @Scope(value = "prototype")
+    @Scope(value = "prototype")
     @Bean(initMethod = "init",destroyMethod = "destory")
     public Bike bike(){
         return new Bike();

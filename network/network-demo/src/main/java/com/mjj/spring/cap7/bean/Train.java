@@ -5,6 +5,9 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
 
+/**
+ * bean实例化默认都是单实例的
+ */
 @Component
 public class Train implements InitializingBean,DisposableBean {
 
