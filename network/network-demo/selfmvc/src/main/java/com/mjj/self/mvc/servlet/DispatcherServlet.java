@@ -5,7 +5,10 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
+import java.net.URL;
 import java.util.*;
 
 /**
@@ -83,6 +86,13 @@ public class DispatcherServlet extends HttpServlet {
 
         // 将 "/mjj-springmvc/mjj/query" 去掉"/mjj-springmvc"
         String path = uri.replace(context,"");
+
+        // 根据请求路径获取要执行的方法
+        Method method = (Method) handlerMap.get(path);
+
+
+        // 拿到控制类
+
     }
 
     private void handlerMapping() {
@@ -94,6 +104,30 @@ public class DispatcherServlet extends HttpServlet {
     private void instance() {
     }
 
-    private void scanPackage(String s) {
+    private void scanPackage(String basePackage) {
+        // 扫描编译好的类路径下的所有类
+
+        URL url = this.getClass().getClassLoader().getResource("/" + replaceTo(basePackage));
+
+        String fileStr = url.getFile();
+
+        File file = new File(fileStr);
+
+        String[] filesStr = file.list();
+
+        for(String path : filesStr){
+            File filePath = new File(fileStr + path);
+
+            if(filePath.isDirectory()){
+                scanPackage(basePackage + "." + path);
+            }
+        }
+
+
+    }
+
+    private String replaceTo(String basePackage) {
+
+        return basePackage.replace("\\.","/");
     }
 }

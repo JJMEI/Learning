@@ -5,7 +5,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainTest {
     public static void main(String[] args) {
-
         // 基于xml配置
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath:beans.xml");
 

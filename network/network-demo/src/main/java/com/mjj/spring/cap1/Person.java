@@ -3,6 +3,7 @@ package com.mjj.spring.cap1;
 public class Person {
     private String name;
     private Integer age;
+    private SubPerson subPerson;
 
     public Person(String name, Integer age) {
         this.name = name;
@@ -31,5 +32,13 @@ public class Person {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public SubPerson getSubPerson() {
+        return subPerson;
+    }
+
+    public void setSubPerson(SubPerson subPerson) {
+        this.subPerson = subPerson;
     }
 }

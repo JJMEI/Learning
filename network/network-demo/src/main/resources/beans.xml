@@ -6,5 +6,13 @@
     <bean id="person" class="com.mjj.spring.cap1.Person">
         <constructor-arg index="0" value="Meijunjie"/>
         <constructor-arg index="1" value="27"/>
+
+        <property name="name" value="mjj"/>
+        <property name="age" value="27"/>
+        <property name="subPerson" ref="subPerson"/>
+    </bean>
+
+    <bean id="subPerson" class="com.mjj.spring.cap1.SubPerson">
+        <property name="subName" value="subMjj"/>
     </bean>
 </beans>
