@@ -1,0 +1,22 @@
+SqlSessionFactoryBuilder
+        SqlSessionFactory
+                SqlSession
+
+
+
+
+
+XML映射器
+
+cache
+cache-ref
+resultMap   描述如何从数据库结果级中加载对象，是最复杂也是最强大的元素
+sql
+insert
+update
+delete
+select
+
+
+
+
