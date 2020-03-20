@@ -1,8 +1,9 @@
 package com.mjj.dynamicProxy.cglib;
 
 
-import net.sf.cglib.MethodInterceptor;
-import net.sf.cglib.MethodProxy;
+
+import org.springframework.cglib.proxy.MethodInterceptor;
+import org.springframework.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 
