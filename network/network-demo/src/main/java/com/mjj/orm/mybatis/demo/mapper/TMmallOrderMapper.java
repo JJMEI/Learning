@@ -1,6 +1,9 @@
 package com.mjj.orm.mybatis.demo.mapper;
 
 import com.mjj.orm.mybatis.demo.dto.TMmallOrder;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface TMmallOrderMapper {
     /**
@@ -58,4 +61,7 @@ public interface TMmallOrderMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(TMmallOrder record);
+
+
+    List<TMmallOrder> getByOrderNoOrUid(@Param("orderNo") String orderNo, @Param("userId") Long userId);
 }

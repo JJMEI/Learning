@@ -20,6 +20,7 @@
     <!--</mappers>-->
 
     <mappers>
-        <mapper class="com.mjj.orm.mybatis.demo.mapper.OrderMapperBasedAnnotation"/>
+        <!--<mapper class="com.mjj.orm.mybatis.demo.mapper.OrderMapperBasedAnnotation"/>-->
+        <mapper resource="sqlMapper/TMmallOrderMapper.xml"/>
     </mappers>
 </configuration>

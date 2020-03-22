@@ -1720,4 +1720,60 @@ public class TMmallOrder extends BaseEntity {
     public void setOrderExt(String orderExt) {
         this.orderExt = orderExt;
     }
+
+
+    @Override
+    public String toString() {
+        return "TMmallOrder{" +
+                "id=" + id +
+                ", marketPrice=" + marketPrice +
+                ", preDiscountPrice=" + preDiscountPrice +
+                ", orderType=" + orderType +
+                ", virtualOrderNo='" + virtualOrderNo + '\'' +
+                ", skuType=" + skuType +
+                ", orderNo='" + orderNo + '\'' +
+                ", orderName='" + orderName + '\'' +
+                ", skuName='" + skuName + '\'' +
+                ", skuId=" + skuId +
+                ", skuNo='" + skuNo + '\'' +
+                ", skuCnt=" + skuCnt +
+                ", skuImageUrl='" + skuImageUrl + '\'' +
+                ", spuId=" + spuId +
+                ", spuNo='" + spuNo + '\'' +
+                ", spuName='" + spuName + '\'' +
+                ", isVirtual=" + isVirtual +
+                ", userId=" + userId +
+                ", userIp='" + userIp + '\'' +
+                ", mac='" + mac + '\'' +
+                ", price=" + price +
+                ", deductions=" + deductions +
+                ", payPrice=" + payPrice +
+                ", payChannel='" + payChannel + '\'' +
+                ", payChannelName='" + payChannelName + '\'' +
+                ", payOrderId='" + payOrderId + '\'' +
+                ", payBusinessNo='" + payBusinessNo + '\'' +
+                ", status=" + status +
+                ", successTime=" + successTime +
+                ", exchangeCode='" + exchangeCode + '\'' +
+                ", couponCode='" + couponCode + '\'' +
+                ", createTime=" + createTime +
+                ", refundTime=" + refundTime +
+                ", platform=" + platform +
+                ", terminal='" + terminal + '\'' +
+                ", cpsId='" + cpsId + '\'' +
+                ", packageName='" + packageName + '\'' +
+                ", packageNameExt='" + packageNameExt + '\'' +
+                ", thirdPartyOrderNo='" + thirdPartyOrderNo + '\'' +
+                ", isSuper=" + isSuper +
+                ", orderSubType=" + orderSubType +
+                ", movieId='" + movieId + '\'' +
+                ", activityId='" + activityId + '\'' +
+                ", widgetId='" + widgetId + '\'' +
+                ", sourceFrom='" + sourceFrom + '\'' +
+                ", resource='" + resource + '\'' +
+                ", isRenew=" + isRenew +
+                ", bindId='" + bindId + '\'' +
+                ", orderExt='" + orderExt + '\'' +
+                '}';
+    }
 }

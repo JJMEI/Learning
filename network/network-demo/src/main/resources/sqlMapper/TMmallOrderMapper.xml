@@ -82,6 +82,31 @@
     -->
     order_ext
   </sql>
+
+  <select id="getByOrderNoOrUid" resultMap="ResultMapWithBLOBs">
+
+    SELECT
+    <include refid="Base_Column_List"/>
+    ,
+    <include refid="Blob_Column_List"/>
+
+    from `t_mmall_order`
+    <trim prefix="WHERE" prefixOverrides="AND | OR">
+      <choose>
+        <when test="orderNo != null and orderNo!=''">
+          AND order_no=#{orderNo}
+        </when>
+        <when test="userId !=null and userId>0">
+          AND user_id=#{userId}
+        </when>
+        <otherwise>
+          AND 1=1
+        </otherwise>
+      </choose>
+    </trim>
+  </select>
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
     <!--
       WARNING - @mbg.generated
