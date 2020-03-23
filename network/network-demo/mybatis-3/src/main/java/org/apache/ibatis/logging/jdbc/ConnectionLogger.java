@@ -27,6 +27,7 @@ import org.apache.ibatis.reflection.ExceptionUtil;
 
 /**
  * Connection proxy to add logging.
+ * 基于动态代理的
  *
  * @author Clinton Begin
  * @author Eduardo Macarron
