@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mjj.learning.self.mybatis.mapper.TUserMapper">
+    <select id="selectByPrimaryKey" resultType="com.mjj.learning.self.mybatis.entity.TUser">
+        SELECT
+        id,userName,realName,mobile,email,note
+        FROM
+          t_user
+        WHERE id=?
+    </select>
+
+    <select id="selectAll" resultType="com.mjj.learning.self.mybatis.entity.TUser">
+                SELECT
+        id,userName,realName,mobile,email,note
+        FROM
+          t_user
+    </select>
+</mapper>
