@@ -1,13 +1,24 @@
 package com.mjj.slef.distribution.selfsnowflakedistribution.version1;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.SystemUtils;
+
+import java.net.Inet4Address;
+import java.net.UnknownHostException;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 /**
  * 雪花算法的优点与缺点
+ *
+ * 可能影响到的点
+ *      服务器时钟回拨
  * @author meijunjie
  */
 public class SnowFlake {
+
+    private static Random random = new Random(1);
 
     /**
      * 系统起始时间戳
@@ -91,8 +102,8 @@ public class SnowFlake {
      * 容器集群环境下machineId和自动dataCenterId自动注册问题
      */
     static {
-        dataCenterId = 23L;
-        machineId = 19L;
+        dataCenterId = getDataCenterId();
+        machineId = getWorkerId();
     }
 
     public static synchronized long nextId(){
@@ -106,6 +117,8 @@ public class SnowFlake {
         if(currStmp == lastStmp){
             // 相同毫秒内 序列号自增
             sequence = (sequence + 1) & MAX_SEQUENCE;
+
+            // 说明此批sequence耗尽
             if(sequence == 0L){
                 currStmp = getNextMil();
             }
@@ -113,6 +126,7 @@ public class SnowFlake {
             sequence = 0L;
         }
 
+        // 记录上一次的时间戳
         lastStmp = currStmp;
 
         /**
@@ -122,6 +136,7 @@ public class SnowFlake {
          *  机器标识部分
          *  序列号部分
          *  通过或运算将所有高低位组合
+         *
          */
         return (currStmp - START_STMP) << TIMESTMP_LEFT
                 | dataCenterId << DATA_CENTER_LEFT
@@ -152,6 +167,49 @@ public class SnowFlake {
        }
 
         System.out.println("每秒产生 " + uniq_key.size() + " 个key");
+
+        for(Long uniq : uniq_key){
+            System.out.println(uniq);
+        }
+
+
     }
+
+
+
+    private static Long getWorkerId(){
+        try{
+            String hostAddress = Inet4Address.getLocalHost().getHostAddress();
+            int[] ints = StringUtils.toCodePoints(hostAddress);
+            int sums = 0;
+            for(int b:ints){
+                sums += b;
+            }
+            return (long)sums%32;
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return (long)random.nextInt(32);
+    }
+
+
+    private static Long getDataCenterId(){
+
+        try {
+            String hostName = SystemUtils.getHostName();
+            int[] ints = StringUtils.toCodePoints(hostName);
+            int sums = 0;
+            for (int i : ints) {
+                sums += i;
+            }
+            return (long)sums%32;
+        }catch (Exception e){
+            // do nothing;
+        }
+
+        return (long)random.nextInt(32);
+
+    }
+
 
 }
