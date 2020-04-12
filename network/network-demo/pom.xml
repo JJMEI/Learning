@@ -6,7 +6,10 @@
     <modules>
         <module>selfmvc</module>
 		<module>selfmybatis</module>
-	</modules>
+        <module>selfrpc</module>
+		<module>selfserialization</module>
+        <module>selfnetty</module>
+    </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>

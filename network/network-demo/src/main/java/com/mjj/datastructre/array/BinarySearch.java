@@ -39,9 +39,7 @@ public class BinarySearch {
 
 
     public static int binarySearchRecursion(int[] array, int searchObject, int lowBound, int upperBound){
-        int lowBound = 0;
-        int upperBound = array.length - 1;
-        int currentIndex = (lowBound + upperBound)/2;
+
 
         return 0;
     }
