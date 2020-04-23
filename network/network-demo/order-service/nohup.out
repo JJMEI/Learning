@@ -1,0 +1,200 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-23 18:46:54.897  INFO 98802 --- [           main] c.e.o.OrderServiceApplication            : Starting OrderServiceApplication v0.0.1-SNAPSHOT on meijunjiedeMacBook-Pro-2.local with PID 98802 (/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar started by meijunjie in /Users/meijunjie/Desktop/Learning/network/network-demo/order-service)
+2020-04-23 18:46:54.902  INFO 98802 --- [           main] c.e.o.OrderServiceApplication            : No active profile set, falling back to default profiles: default
+2020-04-23 18:46:55.926  INFO 98802 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9091 (http)
+2020-04-23 18:46:55.938  INFO 98802 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 18:46:55.938  INFO 98802 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-23 18:46:56.002  INFO 98802 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-23 18:46:56.002  INFO 98802 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1045 ms
+2020-04-23 18:46:56.074  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.5.6-c11b7e26bc554b8523dc929761dd28808913f091, built on 10/08/2019 20:18 GMT
+2020-04-23 18:46:56.074  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=10.58.106.8
+2020-04-23 18:46:56.074  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_131
+2020-04-23 18:46:56.074  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2020-04-23 18:46:56.074  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=./target/order-service-0.0.1-SNAPSHOT.jar
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/Users/meijunjie/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/var/folders/gl/7kpm7n616lb554w69y988pn40000gn/T/
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Mac OS X
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=x86_64
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.14.6
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=meijunjie
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/Users/meijunjie
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/Users/meijunjie/Desktop/Learning/network/network-demo/order-service
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.free=189MB
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.max=3641MB
+2020-04-23 18:46:56.075  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.total=240MB
+2020-04-23 18:46:56.078  INFO 98802 --- [           main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=localhost:2181 sessionTimeout=5000 watcher=com.example.orderservice.utils.ZKUtil$$Lambda$367/1256440269@ca263c2
+2020-04-23 18:46:56.082  INFO 98802 --- [           main] org.apache.zookeeper.common.X509Util     : Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2020-04-23 18:46:56.093  INFO 98802 --- [           main] org.apache.zookeeper.ClientCnxnSocket    : jute.maxbuffer value is 4194304 Bytes
+2020-04-23 18:46:56.100  INFO 98802 --- [           main] org.apache.zookeeper.ClientCnxn          : zookeeper.request.timeout value is 0. feature enabled=
+2020-04-23 18:46:56.105  INFO 98802 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+2020-04-23 18:46:56.125  INFO 98802 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established, initiating session, client: /0:0:0:0:0:0:0:1:61524, server: localhost/0:0:0:0:0:0:0:1:2181
+2020-04-23 18:46:56.136  INFO 98802 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server localhost/0:0:0:0:0:0:0:1:2181, sessionid = 0x1000799bea90002, negotiated timeout = 5000
+2020-04-23 18:46:56.138  INFO 98802 --- [ain-EventThread] com.example.orderservice.utils.ZKUtil    : connect zookeeper success! host: localhost:2181,connect time: 2020-04-23
+2020-04-23 18:46:56.277  INFO 98802 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 18:46:56.446  INFO 98802 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9091 (http) with context path ''
+2020-04-23 18:46:56.449  INFO 98802 --- [           main] c.e.o.OrderServiceApplication            : Started OrderServiceApplication in 1.972 seconds (JVM running for 2.441)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-23 18:46:58.376  INFO 98811 --- [           main] c.e.o.OrderServiceApplication            : Starting OrderServiceApplication v0.0.1-SNAPSHOT on meijunjiedeMacBook-Pro-2.local with PID 98811 (/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar started by meijunjie in /Users/meijunjie/Desktop/Learning/network/network-demo/order-service)
+2020-04-23 18:46:58.380  INFO 98811 --- [           main] c.e.o.OrderServiceApplication            : No active profile set, falling back to default profiles: default
+2020-04-23 18:46:59.484  INFO 98811 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9092 (http)
+2020-04-23 18:46:59.498  INFO 98811 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 18:46:59.498  INFO 98811 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-23 18:46:59.564  INFO 98811 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-23 18:46:59.564  INFO 98811 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1121 ms
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.5.6-c11b7e26bc554b8523dc929761dd28808913f091, built on 10/08/2019 20:18 GMT
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=10.58.106.8
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_131
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=./target/order-service-0.0.1-SNAPSHOT.jar
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/Users/meijunjie/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/var/folders/gl/7kpm7n616lb554w69y988pn40000gn/T/
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Mac OS X
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=x86_64
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.14.6
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=meijunjie
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/Users/meijunjie
+2020-04-23 18:46:59.627  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/Users/meijunjie/Desktop/Learning/network/network-demo/order-service
+2020-04-23 18:46:59.628  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.free=265MB
+2020-04-23 18:46:59.628  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.max=3641MB
+2020-04-23 18:46:59.628  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.total=315MB
+2020-04-23 18:46:59.631  INFO 98811 --- [           main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=localhost:2181 sessionTimeout=5000 watcher=com.example.orderservice.utils.ZKUtil$$Lambda$367/1386883398@5d47c63f
+2020-04-23 18:46:59.635  INFO 98811 --- [           main] org.apache.zookeeper.common.X509Util     : Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2020-04-23 18:46:59.646  INFO 98811 --- [           main] org.apache.zookeeper.ClientCnxnSocket    : jute.maxbuffer value is 4194304 Bytes
+2020-04-23 18:46:59.653  INFO 98811 --- [           main] org.apache.zookeeper.ClientCnxn          : zookeeper.request.timeout value is 0. feature enabled=
+2020-04-23 18:46:59.661  INFO 98811 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+2020-04-23 18:46:59.683  INFO 98811 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established, initiating session, client: /0:0:0:0:0:0:0:1:61537, server: localhost/0:0:0:0:0:0:0:1:2181
+2020-04-23 18:46:59.691  INFO 98811 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server localhost/0:0:0:0:0:0:0:1:2181, sessionid = 0x1000799bea90003, negotiated timeout = 5000
+2020-04-23 18:46:59.693  INFO 98811 --- [ain-EventThread] com.example.orderservice.utils.ZKUtil    : connect zookeeper success! host: localhost:2181,connect time: 2020-04-23
+2020-04-23 18:46:59.826  INFO 98811 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 18:47:00.003  INFO 98811 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9092 (http) with context path ''
+2020-04-23 18:47:00.008  INFO 98811 --- [           main] c.e.o.OrderServiceApplication            : Started OrderServiceApplication in 2.057 seconds (JVM running for 2.528)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-23 18:47:01.042  INFO 98820 --- [           main] c.e.o.OrderServiceApplication            : Starting OrderServiceApplication v0.0.1-SNAPSHOT on meijunjiedeMacBook-Pro-2.local with PID 98820 (/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar started by meijunjie in /Users/meijunjie/Desktop/Learning/network/network-demo/order-service)
+2020-04-23 18:47:01.046  INFO 98820 --- [           main] c.e.o.OrderServiceApplication            : No active profile set, falling back to default profiles: default
+2020-04-23 18:47:02.199  INFO 98820 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9093 (http)
+2020-04-23 18:47:02.212  INFO 98820 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 18:47:02.212  INFO 98820 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-23 18:47:02.286  INFO 98820 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-23 18:47:02.286  INFO 98820 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1190 ms
+2020-04-23 18:47:02.347  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.5.6-c11b7e26bc554b8523dc929761dd28808913f091, built on 10/08/2019 20:18 GMT
+2020-04-23 18:47:02.347  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=10.58.106.8
+2020-04-23 18:47:02.347  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_131
+2020-04-23 18:47:02.347  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2020-04-23 18:47:02.347  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre
+2020-04-23 18:47:02.347  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=./target/order-service-0.0.1-SNAPSHOT.jar
+2020-04-23 18:47:02.347  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/Users/meijunjie/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2020-04-23 18:47:02.347  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/var/folders/gl/7kpm7n616lb554w69y988pn40000gn/T/
+2020-04-23 18:47:02.347  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2020-04-23 18:47:02.348  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Mac OS X
+2020-04-23 18:47:02.348  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=x86_64
+2020-04-23 18:47:02.348  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.14.6
+2020-04-23 18:47:02.348  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=meijunjie
+2020-04-23 18:47:02.348  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/Users/meijunjie
+2020-04-23 18:47:02.348  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/Users/meijunjie/Desktop/Learning/network/network-demo/order-service
+2020-04-23 18:47:02.348  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.free=180MB
+2020-04-23 18:47:02.348  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.max=3641MB
+2020-04-23 18:47:02.348  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.total=241MB
+2020-04-23 18:47:02.351  INFO 98820 --- [           main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=localhost:2181 sessionTimeout=5000 watcher=com.example.orderservice.utils.ZKUtil$$Lambda$367/2075495587@1a052a00
+2020-04-23 18:47:02.355  INFO 98820 --- [           main] org.apache.zookeeper.common.X509Util     : Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2020-04-23 18:47:02.366  INFO 98820 --- [           main] org.apache.zookeeper.ClientCnxnSocket    : jute.maxbuffer value is 4194304 Bytes
+2020-04-23 18:47:02.372  INFO 98820 --- [           main] org.apache.zookeeper.ClientCnxn          : zookeeper.request.timeout value is 0. feature enabled=
+2020-04-23 18:47:02.378  INFO 98820 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+2020-04-23 18:47:02.398  INFO 98820 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established, initiating session, client: /0:0:0:0:0:0:0:1:61544, server: localhost/0:0:0:0:0:0:0:1:2181
+2020-04-23 18:47:02.410  INFO 98820 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server localhost/0:0:0:0:0:0:0:1:2181, sessionid = 0x1000799bea90004, negotiated timeout = 5000
+2020-04-23 18:47:02.412  INFO 98820 --- [ain-EventThread] com.example.orderservice.utils.ZKUtil    : connect zookeeper success! host: localhost:2181,connect time: 2020-04-23
+2020-04-23 18:47:02.544  INFO 98820 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 18:47:02.728  INFO 98820 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9093 (http) with context path ''
+2020-04-23 18:47:02.731  INFO 98820 --- [           main] c.e.o.OrderServiceApplication            : Started OrderServiceApplication in 2.105 seconds (JVM running for 2.621)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/slf4j-log4j12-1.7.30.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-23 18:47:03.952  INFO 98833 --- [           main] c.e.o.OrderServiceApplication            : Starting OrderServiceApplication v0.0.1-SNAPSHOT on meijunjiedeMacBook-Pro-2.local with PID 98833 (/Users/meijunjie/Desktop/Learning/network/network-demo/order-service/target/order-service-0.0.1-SNAPSHOT.jar started by meijunjie in /Users/meijunjie/Desktop/Learning/network/network-demo/order-service)
+2020-04-23 18:47:03.957  INFO 98833 --- [           main] c.e.o.OrderServiceApplication            : No active profile set, falling back to default profiles: default
+2020-04-23 18:47:05.160  INFO 98833 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9094 (http)
+2020-04-23 18:47:05.174  INFO 98833 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 18:47:05.174  INFO 98833 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-23 18:47:05.241  INFO 98833 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-23 18:47:05.241  INFO 98833 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1209 ms
+2020-04-23 18:47:05.305  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.5.6-c11b7e26bc554b8523dc929761dd28808913f091, built on 10/08/2019 20:18 GMT
+2020-04-23 18:47:05.305  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=10.58.106.8
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_131
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=./target/order-service-0.0.1-SNAPSHOT.jar
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=/Users/meijunjie/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=/var/folders/gl/7kpm7n616lb554w69y988pn40000gn/T/
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Mac OS X
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=x86_64
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.14.6
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=meijunjie
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=/Users/meijunjie
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=/Users/meijunjie/Desktop/Learning/network/network-demo/order-service
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.free=176MB
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.max=3641MB
+2020-04-23 18:47:05.306  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Client environment:os.memory.total=238MB
+2020-04-23 18:47:05.310  INFO 98833 --- [           main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=localhost:2181 sessionTimeout=5000 watcher=com.example.orderservice.utils.ZKUtil$$Lambda$367/436546048@77e9807f
+2020-04-23 18:47:05.314  INFO 98833 --- [           main] org.apache.zookeeper.common.X509Util     : Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2020-04-23 18:47:05.326  INFO 98833 --- [           main] org.apache.zookeeper.ClientCnxnSocket    : jute.maxbuffer value is 4194304 Bytes
+2020-04-23 18:47:05.333  INFO 98833 --- [           main] org.apache.zookeeper.ClientCnxn          : zookeeper.request.timeout value is 0. feature enabled=
+2020-04-23 18:47:05.339  INFO 98833 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server localhost/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+2020-04-23 18:47:05.362  INFO 98833 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established, initiating session, client: /0:0:0:0:0:0:0:1:61557, server: localhost/0:0:0:0:0:0:0:1:2181
+2020-04-23 18:47:05.373  INFO 98833 --- [localhost:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server localhost/0:0:0:0:0:0:0:1:2181, sessionid = 0x1000799bea90005, negotiated timeout = 5000
+2020-04-23 18:47:05.375  INFO 98833 --- [ain-EventThread] com.example.orderservice.utils.ZKUtil    : connect zookeeper success! host: localhost:2181,connect time: 2020-04-23
+2020-04-23 18:47:05.511  INFO 98833 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 18:47:05.698  INFO 98833 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9094 (http) with context path ''
+2020-04-23 18:47:05.701  INFO 98833 --- [           main] c.e.o.OrderServiceApplication            : Started OrderServiceApplication in 2.297 seconds (JVM running for 2.817)

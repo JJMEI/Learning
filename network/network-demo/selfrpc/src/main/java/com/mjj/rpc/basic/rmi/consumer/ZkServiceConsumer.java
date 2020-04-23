@@ -37,7 +37,7 @@ public class ZkServiceConsumer implements BasicService {
     public <T extends Remote> T lookup(){
         T service = null;
         if(rmiServiceUrls.size() > 0){
-            String url = null;
+            String url;
             if(rmiServiceUrls.size() == 0){
                 url = rmiServiceUrls.get(0);
             }else {

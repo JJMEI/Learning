@@ -3,7 +3,6 @@ package com.mjj.rpc.basic.zookeeper.basic;
 import org.apache.zookeeper.*;
 import com.mjj.rpc.basic.zookeeper.utils.ZKUtil;
 import org.apache.zookeeper.data.Stat;
-import org.testng.annotations.Test;
 
 import java.util.Collections;
 import java.util.List;
@@ -48,7 +47,6 @@ public class LockSample {
 
 
 
-    @Test
     private void createLock() throws KeeperException, InterruptedException {
 
         // 判断锁根存不存在
