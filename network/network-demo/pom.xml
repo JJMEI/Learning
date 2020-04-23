@@ -9,6 +9,7 @@
         <module>selfrpc</module>
 		<module>selfserialization</module>
         <module>selfnetty</module>
+        <module>selfalgorithmdatastructure</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
