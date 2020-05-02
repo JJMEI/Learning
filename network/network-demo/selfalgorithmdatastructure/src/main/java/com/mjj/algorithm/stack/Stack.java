@@ -39,8 +39,9 @@ public class Stack<T> {
     }
 
     public <T> T pop(){
-        i
 
+
+        return null;
 
     }
 
