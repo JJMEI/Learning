@@ -78,8 +78,58 @@ public class ListIntersection {
     }
 
 
+    /**
+     * 采用双指针遍历方法
+     * @param headA
+     * @param headB
+     * @return
+     */
     public static ListNode intersectionListVersion3(ListNode headA, ListNode headB){
+        ListNode result = null;
 
+        // 该指针指向listA
+        ListNode preA = headA;
+
+        // 该指针指向listB
+        ListNode preB = headB;
+
+        while (preA != null || preB != null){
+
+            if(preA == preB){
+                result = preA;
+                break;
+            }
+
+            if(preA != null){
+                preA = preA.next;
+            }else {
+                preA = headB;
+            }
+
+            if(preB != null){
+                preB = preB.next;
+            }else {
+                preB = headA;
+            }
+
+
+        }
+        return result;
+    }
+
+    /**
+     * 代码优化,
+     * @param headA
+     * @param headB
+     * @return
+     */
+    public static ListNode intersectionListVersion4(ListNode headA, ListNode headB){
+        ListNode preA=headA,preB=headB;
+        while (preA!=preB){
+            preA=preA==null?headB:preA.next;
+            preB=preB==null?headA:preB.next;
+        }
+        return preA;
     }
 
 }

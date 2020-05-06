@@ -1,6 +1,7 @@
 package com.mjj.algorithm.list.mergeTwoSortedList;
 
 import com.mjj.algorithm.list.reveredList.ReveredList;
+import com.mjj.algorithm.list.splitListFromK.SplitListFromK;
 
 /**
  * @author meijunjie
@@ -8,7 +9,7 @@ import com.mjj.algorithm.list.reveredList.ReveredList;
 public class ListNode {
     public int val;
     public ListNode next;
-    ListNode(int val){
+    public ListNode(int val){
         this.val = val;
     }
 
@@ -39,8 +40,13 @@ public class ListNode {
         head.next.next = new ListNode(4);
         head.next.next.next = new ListNode(5);
 
-        System.out.println(ListNode.print(head));
+//        System.out.println(ListNode.print(head));
 
-        System.out.println(ListNode.print(ReveredList.reveredListVersion1(head)));
+//        System.out.println(ListNode.print(ReveredList.reveredListVersion1(head)));
+
+        System.out.println(ListNode.print(SplitListFromK.getKthFromEnd(head,2)));
+
+
+
     }
 }
