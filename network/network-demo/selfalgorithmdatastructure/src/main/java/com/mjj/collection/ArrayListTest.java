@@ -7,7 +7,8 @@ public class ArrayListTest {
     public static void main(String[] args) {
 
         // 虽然数组初始化了，但是里面没有数据
-        ArrayList<Integer> arrayList = new ArrayList<>(10);
+        // new ArrayList 时如果没有设置初始化容量 或者容量小于10 则第一次扩容到10
+        ArrayList<Integer> arrayList = new ArrayList<>();
 
         // ArrayList.size()方法表明的是持有的元素个数
         System.out.println(arrayList.size());
