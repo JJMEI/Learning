@@ -1,7 +1,9 @@
 package org.smartframework.entity;
 
 /**
- * Created by meijunjie on 2018/8/13.
+ *
+ * @author meijunjie
+ * @date 2018/8/13
  */
 public class Data {
     private Object model;

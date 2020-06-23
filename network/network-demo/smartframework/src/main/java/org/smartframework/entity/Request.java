@@ -4,7 +4,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- * Created by meijunjie on 2018/8/13.
+ *
+ * @author meijunjie
+ * @date 2018/8/13
  */
 public class Request {
     private String requestMethod;

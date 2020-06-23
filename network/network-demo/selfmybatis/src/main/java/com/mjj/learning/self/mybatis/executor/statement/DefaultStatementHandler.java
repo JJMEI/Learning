@@ -7,6 +7,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author meijunjie
+ */
 public class DefaultStatementHandler implements StatementHandler {
 
     private MappedStatement mappedStatement;

@@ -3,7 +3,7 @@
 <mapper namespace="com.mjj.learning.self.mybatis.mapper.TUserMapper">
     <select id="selectByPrimaryKey" resultType="com.mjj.learning.self.mybatis.entity.TUser">
         SELECT
-        id,userName,realName,mobile,email,note
+        id,userName,age,mobile,email,note
         FROM
           t_user
         WHERE id=?

@@ -33,7 +33,7 @@ public class RegistryCenter {
     /**
      * 接受的socket连接数
      */
-    private static volatile AtomicLong accpetSocketNum = new AtomicLong();
+    private static volatile AtomicLong acceptSocketNum = new AtomicLong();
 
 
     private final int port;
@@ -58,7 +58,7 @@ public class RegistryCenter {
         ServerSocket serverSocket = new ServerSocket();
         serverSocket.bind(new InetSocketAddress(port));
         System.out.println("RPC 注册中心启动成功！监听端口: " + port);
-        FIXED_REATE_EXECUTOR_SERVICE.scheduleAtFixedRate(() -> System.out.println("系统累计接入的accpet Socket Num: " + accpetSocketNum.get()),1,5, TimeUnit.SECONDS);
+        FIXED_REATE_EXECUTOR_SERVICE.scheduleAtFixedRate(() -> System.out.println("系统累计接入的accept Socket Num: " + acceptSocketNum.get()),1,5, TimeUnit.SECONDS);
         try{
             while (isRunning){
                 EXECUTOR_SERVICE.execute(new ServiceTask(serverSocket.accept()));
@@ -90,7 +90,7 @@ public class RegistryCenter {
         public ServiceTask(Socket client) {
             this.client = client;
             // 当前连接数增加
-            accpetSocketNum.incrementAndGet();
+            acceptSocketNum.incrementAndGet();
         }
 
 

@@ -12,6 +12,8 @@
         <module>selfalgorithmdatastructure</module>
         <module>dubbodemo</module>
         <module>javalogsystem</module>
+        <module>activemqdemo</module>
+        <module>mangointerceptor</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
