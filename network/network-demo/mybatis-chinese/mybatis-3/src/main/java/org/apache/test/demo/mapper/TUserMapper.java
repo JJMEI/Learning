@@ -1,5 +1,6 @@
 package org.apache.test.demo.mapper;
 
+import org.apache.ibatis.annotations.Param;
 import org.apache.test.demo.pojo.TUser;
 
 import java.util.List;
@@ -34,15 +35,18 @@ public interface TUserMapper {
 
     /**
      * 查询用户信息
-     * @param id
-     * @param userName
-     * @param iphone
-     * @param email
-     * @param address
+     * @param tUser
      * @return
      */
-    List<TUser> queryUserInfo(Long id, String userName,String iphone,String email,String address);
+    List<TUser> queryUserInfo(TUser tUser);
 
+
+    /**
+     * 按id批量查询用户信息
+     * @param ids
+     * @return
+     */
+    List<TUser> queryUserInfoByIds(Long[] ids);
     /**
      * 更新用户信息
      * @param tUser
@@ -50,12 +54,14 @@ public interface TUserMapper {
      */
     Long updateUserInfo(TUser tUser);
 
+
     /**
-     *
+     * 查询用户信息
      * @param id
+     * @param userName
      * @return
      */
-    Long deleteUserById(Long id);
+    List<TUser> queryUserById(@Param("id") Long id, @Param("userName") String userName);
 
 
 }

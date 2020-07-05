@@ -16,7 +16,9 @@ import org.junit.Test;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -109,7 +111,7 @@ public class MybatisDemo {
         List<TUser> tUsers = new ArrayList<>();
 
 
-        for(int i=10000;i<1000000;i++){
+        for(int i=10;i<100;i++){
             tUsers.add(TUser.builder().userName("Peter-"+i)
                     .age(11)
                     .sex("female")
@@ -124,4 +126,65 @@ public class MybatisDemo {
         sqlSession.close();
 
     }
+
+
+
+    @Test
+    public void testBatchSelectUserInfo(){
+        SqlSession sqlSession = DbUtil.getSqlSession();
+        TUserMapper tUserMapper = sqlSession.getMapper(TUserMapper.class);
+
+        List<TUser> tUsers;
+
+        tUsers = tUserMapper.queryUserInfoByIds(new Long[]{1L,2L,3L,4L,5L,6L,7L,8L,9L});
+
+        System.out.println(Arrays.toString(tUsers.toArray()));
+    }
+
+
+    @Test
+    public void testUpdateUserInfo(){
+        SqlSession sqlSession = DbUtil.getSqlSession();
+        TUserMapper tUserMapper = sqlSession.getMapper(TUserMapper.class);
+        TUser tUser = TUser.builder().id(1L)
+                .userName("梅俊杰-改")
+                .address("美利坚合众国")
+                .age(111).build();
+
+        System.out.println(tUserMapper.updateUserInfo(tUser));
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+
+    @Test
+    public void testSelectLike(){
+        SqlSession sqlSession = DbUtil.getSqlSession();
+        TUserMapper tUserMapper = sqlSession.getMapper(TUserMapper.class);
+        TUser tUser = TUser.builder().id(1L)
+                .userName("")
+                .address("美利坚合众国")
+                .age(111).build();
+
+        List<TUser> users = tUserMapper.queryUserInfo(tUser);
+        sqlSession.commit();
+
+        System.out.println(Arrays.toString(users.toArray()));
+        sqlSession.close();
+    }
+
+
+    @Test
+    public void testChooseSelectUserInfo(){
+        SqlSession sqlSession = DbUtil.getSqlSession();
+        TUserMapper tUserMapper = sqlSession.getMapper(TUserMapper.class);
+
+
+        List<TUser> users = tUserMapper.queryUserById(null,"");
+        sqlSession.commit();
+
+        System.out.println(Arrays.toString(users.toArray()));
+        sqlSession.close();
+    }
+
 }

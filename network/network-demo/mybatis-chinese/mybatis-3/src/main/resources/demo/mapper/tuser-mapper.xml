@@ -10,15 +10,7 @@
     <!--返回自定义主键-->
     <insert id="insertUserWithPrimaryKey" parameterType="TUser" keyColumn="id" keyProperty="id" useGeneratedKeys="true">
         insert INTO t_user( <include refid="column"/>)
-        VALUES (
-        #{userName},
-        #{sex},
-        #{age},
-        #{iphone},
-        #{email},
-        #{address},
-        now(),
-        now());
+        VALUES (#{userName},#{sex},#{age},#{iphone},#{email},#{address},now(),now());
     </insert>
 
 
@@ -36,10 +28,15 @@
     </insert>
 
 
+    <!--foreach 元素允许你指定一个集合，声明可以在集合体内使用集合的项 （item）和索引变量 index,也允许指定开头和结尾的字符串以及集合迭代之间的分隔符
+        可以将任务可迭代的对象List Set等 Map对象或者数组作为集合参数传递给foreach  当时使用可迭代对象或者数组时。index是当前迭代的序号 item是本次迭代获取到的元素。
+        当使用Map对象 或者Map.Entry对象的集合 index 是键，item是值
+
+    -->
     <insert id="batchInsertUser" parameterType="TUser">
         insert INTO t_user( <include refid="column"/>)
         VALUES
-          <foreach collection="list" item="tUser" index="index" separator=",">
+          <foreach collection="list" item="tUser" index="index"  separator=",">
               (#{tUser.userName},
               #{tUser.sex},
               #{tUser.age},
@@ -50,5 +47,70 @@
               now())
           </foreach>
     </insert>
+
+
+    <select id="queryUserInfoByIds" parameterType="java.lang.Long" resultType="TUser">
+        select id,user_name,age,sex,iphone,email,address,create_time,modify_time
+            FROM t_user
+            where id IN
+            <foreach collection="array" index="index" item="id" open="(" close=")" separator=",">
+                #{id}
+            </foreach>
+    </select>
+
+
+    <select id="queryUserInfo" parameterType="TUser" resultType="TUser">
+        select <include refid="column"/> FROM t_user
+          <where>
+          <if test="userName != null and userName.trim() !=''">
+               user_name like concat('%',concat(#{userName},'%'))
+          </if>
+          </where>
+    </select>
+
+    <select id="queryUserById" resultType="TUser">
+        SELECT <include refid="column"/>
+        FROM t_user
+        <where>
+            <choose>
+                <when test="id != null">id=#{id}</when>
+                <when test="userName != null and userName.trim()!=''">user_name=#{userName}</when>
+                <otherwise>
+
+                </otherwise>
+
+            </choose>
+        </where>
+    </select>
+
+    <update id="updateUserInfo" parameterType="TUser">
+        update t_user
+        <set>
+            <if test="userName !=null and userName !=''">user_name=#{userName},</if>
+            <if test="age != null">age=#{age},</if>
+            <if test="sex != null and sex !=''">sex=#{sex},</if>
+            <if test="iphone != null and iphone !=''">iphone=#{iphone},</if>
+            <if test="email != null and email !=''">email=#{email},</if>
+            <if test="address != null and address !=''">address=#{address},</if>
+            modify_time=now()
+        </set>
+        where id=#{id}
+    </update>
+
+    <!--
+
+        <where>
+        <set>
+        <trim prefix>功能更强大
+
+        <trim prefix="WHERE" prefixOverrides="AND |OR">
+
+        </trim>
+
+        <trim prefix="SET" prefixOverrides=",">
+        </trim>
+
+
+    -->
 
 </mapper>
