@@ -8,13 +8,15 @@ public class TestCglib {
     public static void main(String[] args) {
         Enhancer enhancer = new Enhancer();
 
-        enhancer.setSuperclass(TargetObject.class);
+        enhancer.setSuperclass(CglibService.class);
 
         enhancer.setCallback(new TargetMethodInterceptor());
 
-        TargetObject targetObject = (TargetObject) enhancer.create();
+        CglibService targetObject = (CglibService) enhancer.create();
 
-        System.out.println(targetObject.method1("DDDDDD"));
-        System.out.println(targetObject.method2(333));
+        System.out.println(targetObject.sayHello("DDDDDD"));
+
+        // final方法不能由
+        System.out.println(targetObject.sayOthers(333));
     }
 }

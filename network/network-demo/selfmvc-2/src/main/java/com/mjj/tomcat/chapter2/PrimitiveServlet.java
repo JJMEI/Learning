@@ -22,8 +22,11 @@ public class PrimitiveServlet implements Servlet {
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
         System.out.println("from service....");
         PrintWriter printWriter = res.getWriter();
-        printWriter.write("Hello, Roses are red.");
-        printWriter.write("Violets are blue");
+        //
+        printWriter.println("Hello, Roses are red.");
+
+        //
+        printWriter.print("Violets are blue");
     }
 
     @Override
@@ -33,6 +36,6 @@ public class PrimitiveServlet implements Servlet {
 
     @Override
     public void destroy() {
-        System.out.println("destory....");
+        System.out.println("destroy....");
     }
 }

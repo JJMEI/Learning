@@ -49,7 +49,7 @@ public class RabbitProducer {
 
         for(;;){
 
-            Thread.sleep(1000);
+            Thread.sleep(100);
             channel.basicPublish(EXCHANGE_NAME,ROUTING_KEY, MessageProperties.PERSISTENT_TEXT_PLAIN,
                     LocalDateTime.now().toString().getBytes());
         }

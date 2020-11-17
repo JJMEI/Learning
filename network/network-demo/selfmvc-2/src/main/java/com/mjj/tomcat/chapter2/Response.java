@@ -3,13 +3,29 @@ package com.mjj.tomcat.chapter2;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.ServletResponse;
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Locale;
 
 public class Response implements ServletResponse {
 
-    private InputStream inputStream;
+    private OutputStream outputStream;
+    private Request request;
+
+
+    public Response(OutputStream outputStream){
+        this.outputStream = outputStream;
+    }
+
+
+    public void setRequest(Request request){
+        this.request = request;
+    }
+
+    public void sendStaticResource(Request request, Response response){
+        // TODO do somthing
+    }
+
     @Override
     public String getCharacterEncoding() {
         return null;

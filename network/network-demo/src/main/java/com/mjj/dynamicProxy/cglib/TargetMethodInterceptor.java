@@ -8,7 +8,7 @@ import org.springframework.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
- *
+ * cglib无法代理final方法  final类型的类不能被继承 所有也不能被修饰
  * 目标对象的拦截器，实现MethodInterceptor
  * @author meijunjie
  */

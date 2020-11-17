@@ -44,6 +44,9 @@ public class Request implements ServletRequest {
         return null;
     }
 
+    public String getUri() {
+        return uri;
+    }
 
     @Override
     public Object getAttribute(String name) {

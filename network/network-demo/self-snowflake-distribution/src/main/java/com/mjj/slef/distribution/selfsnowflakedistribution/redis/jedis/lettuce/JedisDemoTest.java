@@ -55,6 +55,7 @@ public class JedisDemoTest {
         }
     }
 
+    @Test
     public void mdelTest(){
         Jedis jedis = new Jedis("10.211.55.19",6379);
 

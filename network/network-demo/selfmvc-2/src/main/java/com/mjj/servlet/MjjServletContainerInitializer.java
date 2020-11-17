@@ -17,7 +17,7 @@ public class MjjServletContainerInitializer implements ServletContainerInitializ
 
     /**
      *
-     * @param c
+     * @param c    感兴趣的类的子类型
      * @param ctx
      * @throws ServletException
      */

@@ -13,19 +13,25 @@ public class MyProxyTest {
 
         // 获取动态代理类
 
-        Class proxyClazz = Proxy.getProxyClass(IHello.class.getClassLoader(),IHello.class);
-
-        Constructor constructor = proxyClazz.getConstructor(InvocationHandler.class);
-
-
-        IHello iHello = (IHello) constructor.newInstance(new MyInvocationHandler(new HelloImpl()));
-
-        iHello.sayHello();
-
-
+//        Class proxyClazz = Proxy.getProxyClass(IHello.class.getClassLoader(),IHello.class);
+//
+//        Constructor constructor = proxyClazz.getConstructor(InvocationHandler.class);
+//
+//
+//        IHello iHello = (IHello) constructor.newInstance(new MyInvocationHandler(new HelloImpl()));
+//
+//        iHello.sayHello();
 
 
-        IHello hello_ = (IHello) Proxy.newProxyInstance(IHello.class.getClassLoader(),new Class[]{IHello.class},new MyInvocationHandler(new HelloImpl()));
+        /**
+         * 生产代理类的精髓
+         * Proxy.newProxyInstance(类加载器，代理的接口，InvocationHandler)
+         * InvocationHandler真正的逻辑处理
+         * IHello.class 代理方法接口
+         */
+        IHello hello_ = (IHello) Proxy.newProxyInstance(IHello.class.getClassLoader(),
+                new Class[]{IHello.class},
+                new MyInvocationHandler(new HelloImpl()));
 
         hello_.sayHello();
     }
