@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: rabbitmq-demo
+
+#  rabbitmq  信息
+  rabbitmq:
+    password: root
+    username: root
+    host: 10.211.55.19
+    port: 5672
+

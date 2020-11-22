@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person" class="com.mjj.spring.self.spring.Person" init-method="initMethod">
+        <property name="name" value="mjj"/>
+        <property name="age" value="27"/>
+        <property name="pet" ref="animal"/>
+    </bean>
+
+    <bean id="animal" class="com.mjj.spring.self.spring.Animal">
+        <property name="name" value="dog"/>
+        <property name="age"  value="11"/>
+        <property name="master" ref="person"/>
+     </bean>
+
+    <bean id="bar" class="com.mjj.spring.self.spring.StaticBarInterfaceFactory" factory-method="getInstance"/>
+
+
+    <bean id="barFactory" class="com.mjj.spring.self.spring.NoStaticBarInterfaceFactory"/>
+
+    <bean id="bar2" factory-bean="barFactory" factory-method="getInstance"/>
+
+    <bean id="nextDate" class="com.mjj.spring.self.spring.NextDayDateFactoryBean"/>
+
+    <bean id="nextDateDisplayer11" class="com.mjj.spring.self.spring.NextDateDisplayer">
+        <property name="nextDisplayer" ref="nextDate"/>
+    </bean>
+
+
+</beans>
