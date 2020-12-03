@@ -23,16 +23,16 @@ public class ClassFileTransformerTest implements ClassFileTransformer {
 
 
         // 过滤指定包名下的类
-        if(!className.startsWith("com/example")){
-            return null;
-        }else {
-            LOGGER.info("className = {}",className);
+//        if(!className.startsWith("com/example")){
+//            return null;
+//        }else {
+//            LOGGER.info("className = {}",className);
 
             String fullClassName = className.replaceAll("/",".");
-            LOGGER.info("fullClassName = {}",fullClassName);
+//            LOGGER.info("fullClassName = {}",fullClassName);
 
             ClassPool classPool = ClassPool.getDefault();
-            LOGGER.info("classPool = {}",classPool);
+//            LOGGER.info("classPool = {}",classPool);
 
             CtClass ctClass = null;
             try{
@@ -51,14 +51,28 @@ public class ClassFileTransformerTest implements ClassFileTransformer {
 
             try{
                 Object[] annotations = ctClass.getAnnotations();
-                LOGGER.info("className = {}, annotations = {}",className, Arrays.toString(annotations));
+//                LOGGER.info("className = {}, annotations = {}",className, Arrays.toString(annotations));
                 CtMethod[] methods = ctClass.getDeclaredMethods();
-                for(CtMethod ctMethod : methods){
-                    LOGGER.info("className = {}, methodName={}",className,ctMethod.getName());
-                    ctMethod.insertBefore("long start = "+System.currentTimeMillis() + ";");
-                    ctMethod.insertAfter("System.out.println(\"(" + System.currentTimeMillis() + "-start) transform end...\");");
+                System.out.println(className);
 
+                if(className.equals("org/apache/logging/log4j/Logger") || className.equals("ch/qos/logback/classic/Logger") || className.equals("org/slf4j/Logger")){
+                    System.out.println(className);
+                    for(CtMethod ctMethod : methods){
+
+//                    LOGGER.info("className = {}, methodName={}",className,ctMethod.getName());
+//                    long start = System.currentTimeMillis();
+//                    ctMethod.insertBefore("long start = "+start + ";");
+//                    long end = System.currentTimeMillis();
+//                    ctMethod.insertAfter("System.out.println(\"(" + (end-start) + "ms...\");");
+
+                        if(ctMethod.getName().equals("info")){
+                            ctMethod.setBody("System.out.println(msg);");
+                        }
+
+
+                    }
                 }
+
                 return ctClass.toBytecode();
             } catch (ClassNotFoundException | CannotCompileException | IOException ex) {
                 LOGGER.error("exception = {}",ex);
@@ -68,6 +82,7 @@ public class ClassFileTransformerTest implements ClassFileTransformer {
                 ctClass.detach();
             }
 
-        }
+    //    }
     }
+
 }

@@ -18,10 +18,11 @@
         <module>springmvcwebsourcecodeanalyze</module>
         <module>servlet-3.0-learning</module>
         <module>springmvc-annotation</module>
-        <module>woodpecker</module>
         <module>javaagent</module>
 		<module>javaagent</module>
-	</modules>
+		<module>rabbitmqdemovalidation</module>
+        <module>logagent</module>
+    </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -191,6 +192,17 @@
 			<groupId>io.minio</groupId>
 			<artifactId>minio</artifactId>
 			<version>3.0.10</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.rabbitmq/amqp-client -->
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>5.7.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
 		</dependency>
 
 

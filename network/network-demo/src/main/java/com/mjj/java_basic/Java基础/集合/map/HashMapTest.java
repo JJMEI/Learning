@@ -1,5 +1,6 @@
 package com.mjj.java_basic.Java基础.集合.map;
 
+import java.util.Date;
 import java.util.HashMap;
 
 public class HashMapTest {
@@ -33,6 +34,10 @@ public class HashMapTest {
         for(int i=0;i<100;i++){
             maps.put(""+i,""+i);
         }
+
+        Date currentDate = new Date();
+        System.out.println(currentDate.toLocaleString());
+
 
 
     }

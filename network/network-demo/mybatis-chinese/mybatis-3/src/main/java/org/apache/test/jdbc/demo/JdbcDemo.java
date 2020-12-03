@@ -1,6 +1,8 @@
 package org.apache.test.jdbc.demo;
 
 
+import org.junit.Test;
+
 import java.sql.*;
 
 /**
@@ -64,6 +66,60 @@ import java.sql.*;
  * Created by meijunjie on 2019/1/30.
  */
 public class JdbcDemo {
+
+
+
+    @Test
+    public void testPreparedStatement() throws ClassNotFoundException, SQLException {
+
+        // 1. 注册驱动 static
+        Class.forName("com.mysql.jdbc.Driver");
+
+        // 预编译是由手动开启的  ?&useServerPrepStmts=true
+        String dbUrl = "jdbc:mysql://localhost:3306/t_wp_user?&useServerPrepStmts=true&cachePrepStmts=true";
+        String dbUsername = "root";
+        String dbPassword = "rootroot";
+        // 2. 创建数据库连接
+        Connection connection = DriverManager.getConnection(dbUrl,dbUsername,dbPassword);
+
+        PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM t_application where application_name=?");
+
+        preparedStatement.setString(1,"legou-m-api");
+
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        preparedStatement.setString(1,"legou-u-api");
+
+        long start = System.currentTimeMillis();
+
+
+
+
+
+
+        System.out.println("耗时:" + (System.currentTimeMillis()  - start)/1000 + " 秒");
+
+
+
+        while (resultSet.next()){
+            System.out.println(resultSet.getMetaData().getColumnName(1) + ": " + resultSet.getString(1));
+            System.out.println(resultSet.getMetaData().getColumnName(2) + ": " + resultSet.getString(2));
+            System.out.println(resultSet.getMetaData().getColumnName(3) + ": " + resultSet.getString(3));
+            System.out.println(resultSet.getMetaData().getColumnName(4) + ": " + resultSet.getString(4));
+            System.out.println(resultSet.getMetaData().getColumnName(5) + ": " + resultSet.getString(5));
+        }
+
+        resultSet.close();
+        preparedStatement.close();
+
+
+        PreparedStatement preparedStatement2 = connection.prepareStatement("SELECT * FROM t_application where application_name=?");
+
+        preparedStatement2.setString(1,"legou-u-api");
+        ResultSet resultSet2 = preparedStatement2.executeQuery();
+
+
+    }
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         // 1. 注册驱动 static
         Class.forName("com.mysql.jdbc.Driver");
@@ -81,6 +137,11 @@ public class JdbcDemo {
 
         // 查询
         ResultSet resultSet = statement.executeQuery(sql);
+
+
+        statement.addBatch();
+
+        statement.executeBatch()
 
 //        int changeID = statement.executeUpdate("update t_application set application_name='fuck' WHERE id=1");
 

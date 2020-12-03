@@ -8,6 +8,6 @@ import java.lang.instrument.Instrumentation;
 public class InstrumentationPremainTest {
 
     public static void premain(String agentArgs, Instrumentation inst){
-        inst.addTransformer(new ClassFileTransformerTest());
+        inst.addTransformer(new WoodpeckerTransformer());
     }
 }

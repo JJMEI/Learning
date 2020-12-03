@@ -11,7 +11,7 @@ public class JavaAgentController {
 
     @GetMapping("/java/agent")
     public void javaAgentTest() throws InterruptedException {
-        LOGGER.info("java agent test");
+        LOGGER.error("java agent test");
         Thread.sleep(1999);
     }
 }

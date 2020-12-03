@@ -55,6 +55,8 @@ public class LeetCode_101_对称二叉树 {
         if(left == null && right == null){
             return true;
         }
+
+        // 如果节点有一个为空，则直接返回错
         if(left == null || right == null){
             return false;
         }
@@ -67,9 +69,13 @@ public class LeetCode_101_对称二叉树 {
     }
 
 
-
+    /**
+     * bfs
+     * @param root
+     * @return
+     */
     public static boolean isSymmetricV2(TreeNode root){
-        if(root == null || (root.left == null && root.right == null)){
+        if(root == null){
             return true;
         }
 
