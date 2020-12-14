@@ -12,6 +12,9 @@ import com.mjj.learning.self.mybatis.executor.statement.StatementHandler;
 import java.sql.*;
 import java.util.List;
 
+/**
+ * @author meijunjie
+ */
 public class SimpleExecutor implements Executor {
 
     private Configuration configuration;

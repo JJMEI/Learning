@@ -12,6 +12,14 @@ public interface SqlSession {
      */
     <T> T selectOne(String statement, Object parameter);
 
+
+    /**
+     *
+     * @param statement
+     * @param parameter
+     * @param <E>
+     * @return
+     */
     <E> List<E> selectList(String statement, Object parameter);
 
     /**

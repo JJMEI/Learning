@@ -20,6 +20,8 @@ import java.sql.Connection;
 /**
  *
  * SqlSessionFactory  SqlSession openSession();
+ *
+ * 工厂模式 获取SqlSession
  * Creates an {@link SqlSession} out of a connection or a DataSource
  *
  * @author Clinton Begin
@@ -32,8 +34,18 @@ public interface SqlSessionFactory {
 
   SqlSession openSession(Connection connection);
 
+  /**
+   * 事务隔离级别
+   * @param level
+   * @return
+   */
   SqlSession openSession(TransactionIsolationLevel level);
 
+  /**
+   * 执行器类型  ExecutorType Simple  Reuse  & Batch  批量执行
+   * @param execType
+   * @return
+   */
   SqlSession openSession(ExecutorType execType);
 
   SqlSession openSession(ExecutorType execType, boolean autoCommit);

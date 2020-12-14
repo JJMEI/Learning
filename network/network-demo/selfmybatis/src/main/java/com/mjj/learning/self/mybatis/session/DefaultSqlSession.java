@@ -8,6 +8,9 @@ import com.mjj.learning.self.mybatis.executor.SimpleExecutor;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * @author meijunjie
+ */
 public class DefaultSqlSession implements SqlSession {
 
     private Configuration configuration;

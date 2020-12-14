@@ -31,6 +31,9 @@ public class Configuration {
     private String dbDriver;
 
 
+    /**
+     * 缓存MappedStatement
+     */
     protected final Map<String,MappedStatement> mappedStatements = new HashMap<>();
 
     /**

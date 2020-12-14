@@ -61,6 +61,9 @@ public class SqlSessionFactoryBuilder {
   }
 
   public SqlSessionFactory build(InputStream inputStream) {
+
+    // 获取配置文件
+    Thread.currentThread().getContextClassLoader().getResourceAsStream("config.path");
     return build(inputStream, null, null);
   }
 
@@ -90,6 +93,8 @@ public class SqlSessionFactoryBuilder {
 
   /**
    * 最终返回的是DefaultSqlSessionFactory()
+   *
+   *
    * @param config
    * @return
    */

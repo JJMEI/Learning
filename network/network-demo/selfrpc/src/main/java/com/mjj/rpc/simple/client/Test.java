@@ -13,13 +13,14 @@ public class Test {
         ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
         for(;;){
-            executorService.execute(new Runnable() {
-                @Override
-                public void run() {
-                    IOrderService orderService = getProxyObject(IOrderService.class);
-
-                    System.out.println(orderService.createOrder());
+            executorService.execute(() -> {
+                IOrderService orderService = getProxyObject(IOrderService.class);
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
+                System.out.println(orderService.createOrder());
             });
         }
     }

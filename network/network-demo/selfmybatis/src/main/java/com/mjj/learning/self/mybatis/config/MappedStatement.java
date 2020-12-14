@@ -5,9 +5,24 @@ package com.mjj.learning.self.mybatis.config;
  */
 public class MappedStatement {
 
+    /**
+     * 命名空间
+     */
     private String namespace;
+
+    /**
+     * 资源id
+     */
     private String sourceId;
+
+    /**
+     * sql 从注解里提取 或者 从mapper.xml文件中提取
+     */
     private String sql;
+
+    /**
+     * 结果类型
+     */
     private String resultType;
 
 

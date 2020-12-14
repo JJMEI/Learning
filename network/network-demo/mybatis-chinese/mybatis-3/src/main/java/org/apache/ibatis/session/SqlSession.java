@@ -46,7 +46,7 @@ public interface SqlSession extends Closeable {
   <T> T selectOne(String statement);
 
   /**
-   * 返回单行数据 带有参数
+   * 返回单行数据 带有参数  unique identifier 执行语句的唯一标识
    * Retrieve a single row mapped from the statement key and parameter.
    * @param <T> the returned object type
    * @param statement Unique identifier matching the statement to use.
@@ -283,7 +283,7 @@ public interface SqlSession extends Closeable {
   Configuration getConfiguration();
 
   /**
-   * 获取Mapper接口的实例化对象
+   * 获取Mapper接口的实例化对象  Mapper接口
    * 泛型方法  <T> T getMapper(Class<T> type)
    * Retrieves a mapper. retrieves a mapper
    * @param <T> the mapper type

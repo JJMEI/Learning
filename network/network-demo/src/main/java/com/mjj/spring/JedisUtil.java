@@ -1,6 +1,7 @@
 package com.mjj.spring;
 
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
+import org.junit.Test;
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
@@ -83,6 +84,16 @@ public class JedisUtil {
 
     public static void addCache(String key, String value) {
         jedisCluster.set(key, value);
+    }
+
+    @Test
+    public void bitTest(){
+        long start = System.currentTimeMillis();
+        for (int i=0;i<10000;i++){
+
+        }
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
     }
 
     public static void main(String[] args) throws InterruptedException {

@@ -51,6 +51,7 @@
     </settings>
 
 
+    <!--别名设置器-->
     <typeAliases>
         <typeAlias type="org.apache.test.demo.pojo.TUser" alias="TUser"/>
     </typeAliases>

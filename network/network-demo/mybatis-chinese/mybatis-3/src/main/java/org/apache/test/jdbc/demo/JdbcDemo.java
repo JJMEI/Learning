@@ -139,9 +139,9 @@ public class JdbcDemo {
         ResultSet resultSet = statement.executeQuery(sql);
 
 
-        statement.addBatch();
-
-        statement.executeBatch()
+//        statement.addBatch();
+//
+//        statement.executeBatch()
 
 //        int changeID = statement.executeUpdate("update t_application set application_name='fuck' WHERE id=1");
 

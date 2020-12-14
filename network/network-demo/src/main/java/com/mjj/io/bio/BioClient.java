@@ -15,11 +15,12 @@ public class BioClient {
         for (int i=0;i<400;i++){
             new Thread(() -> {
                 try{
-                    Socket socket = new Socket("127.0.0.1",8000);
+                    Socket socket = new Socket("10.211.55.19",8000);
                     while (true){
                         socket.getOutputStream().write((new Date()+": hello world").getBytes());
                         socket.getOutputStream().flush();
                         Thread.sleep(2000);
+                        socket.close();
                     }
                 }catch (Exception e){
                     e.printStackTrace();

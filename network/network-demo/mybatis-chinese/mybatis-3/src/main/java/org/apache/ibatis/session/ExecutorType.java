@@ -16,6 +16,8 @@
 package org.apache.ibatis.session;
 
 /**
+ *
+ * Executor 的类型  默认的执行器是 SIMPLE
  * @author Clinton Begin
  */
 public enum ExecutorType {

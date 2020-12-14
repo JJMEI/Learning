@@ -18,12 +18,18 @@ import java.net.URL;
 import java.util.List;
 import java.util.Properties;
 
+/**
+ * @author meijunjie
+ */
 public class SqlSessionFactory {
 
     private Configuration configuration = new Configuration();
 
     public SqlSessionFactory() throws SAXException {
+        // 载入DB相关信息
         loadDbInfo();
+
+        // 载入mapper相关信息
         loadMappersInfo();
     }
 
@@ -54,7 +60,7 @@ public class SqlSessionFactory {
     }
 
     /**
-     * 解析document
+     * 解析document 提取配置文件中的参数
      * @param file
      */
     @SuppressWarnings("unchecked")
@@ -109,6 +115,8 @@ public class SqlSessionFactory {
     }
 
     private void loadDbInfo() {
+
+        // 类加载器读取 配置信息
         InputStream dbInfo = SqlSessionFactory.class.getClassLoader().getResourceAsStream(Configuration.DB_CONFIG_LOCATION);
 
         Properties properties = new Properties();

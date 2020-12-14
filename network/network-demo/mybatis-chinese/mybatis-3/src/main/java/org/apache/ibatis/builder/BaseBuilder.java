@@ -29,6 +29,8 @@ import org.apache.ibatis.type.TypeHandler;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 
 /**
+ * XML解析器 专门用来解析Mybatis配置文件
+ *
  * @author Clinton Begin
  */
 public abstract class BaseBuilder {
